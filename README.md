@@ -1,5 +1,9 @@
 # week3 case
 
+## DEMO
+
+ *Here's how it looks in Vercel:* [Vercel](https://marvel-app-six.vercel.app/) 
+
 https://developer.marvel.com/ API ını kullanarak geçen hafta ki çalışmanızı devam ettirmeniz istenmektedir.
 
 **HEDEF** : Bir React.JS projesi içerisinde API a istek atarak belirli dataları göstermek ve sayfalamak.

@@ -1,0 +1,238 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+body {
+  background-color: #222222;
+  margin: 0;
+}
+
+header {
+  width: auto;
+  background-image: url("./img/bg.svg");
+  background-position: center;
+  height: 1101px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+header > .logo {
+  top: 700px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 48px;
+  max-width: 1208px;
+  margin: 254px auto 0;
+}
+
+.cardContainer > div {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  transition: 0.5s all ease-in-out;
+  width: 252px;
+  height: 369px;
+  border: 1px solid white;
+  margin-bottom: 105px;
+}
+.card:hover {
+  cursor: pointer;
+  box-shadow: 0px 1px 15px 10px lightsteelblue;
+}
+
+.card > img {
+  margin-top: -42px;
+  width: calc(100% - 36px);
+  height: 324px;
+  border-top: 1px solid white;
+  padding: 10px 18px 0px 18px;
+}
+
+.card > .cardText {
+  color: white;
+  font-size: 18px;
+  text-align: center;
+}
+.card > .cardText:hover {
+  cursor: pointer;
+  text-shadow: 1px 1px 2px orangered, 0 0 25px lightpink, 0 0 5px lightsteelblue;
+}
+
+
+.loadingContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.paginationContainer {
+  width: 1208px;
+  height: 72px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 auto 210px auto;
+}
+
+.paginationContainer > .pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 768px;
+}
+
+.paginationContainer > .pagination > img:hover {
+  cursor: pointer;
+  box-shadow: 0px 1px 15px 10px lightsteelblue;
+  border-radius: 50%;
+}
+
+.paginationContainer > .pagination a {
+  color: darkgray;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  font-size: 20px;
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+    cursor: pointer;
+  justify-content: center;
+}
+.paginationContainer > .pagination > .selected {
+  height: 48px;
+  color: white;
+  font-weight: 500px;
+  background-color: #7e7e7e;
+  border-radius: 30px;
+
+}
+
+/*tablet görünüm*/
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  header {
+    max-width: 100%;
+    height: 528px;
+    background-position: top;
+  }
+  header > .logo {
+    top: 352px;
+    width: 300px;
+  }
+  .cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cardContainer > div {
+    width: 33%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card {
+    width: calc(100% - 48px);
+  }
+
+  .paginationContainer {
+    width: 100%;
+  }
+  .paginationContainer > .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/*mobil görünüm*/
+
+@media only screen and (max-width: 767px) {
+  header {
+    width: 100%;
+    background-position: top;
+    background-size: cover;
+    height: 375px;
+  }
+  header > .logo {
+    top: 250px;
+    width: 168px;
+  }
+  .cardContainer {
+    margin-top: 150px;
+  }
+
+  .cardContainer > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cardContainer > div:last-child > .card{
+    margin-bottom: 8px;
+  }
+  .card {
+    width: 100%;
+    margin-left: 24px;
+    margin-right: 24px;
+
+
+  }
+
+  .paginationContainer {
+    display: flex;
+    justify-content: center;
+    width: 0px;
+    margin: 0px auto;
+  }
+  .paginationContainer > .pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .paginationContainer > .pagination > a,
+  .paginationContainer > .pagination > img {
+    margin-right: 14px;
+    width: 32px;
+  }
+
+  .paginationContainer > .pagination > img:last-child {
+    margin-right: 0px;
+  }
+
+  .paginationContainer > .pagination a {
+    font-size: 14px;
+    min-width: 28px;
+  }
+
+  .paginationContainer > .pagination > #selected {
+    border-radius: 15px;
+  }
+}
